@@ -38,7 +38,8 @@ def main(): # pārbauda vai ir I va F
         
         data= list(map(int,input().split()))
         assert len(data) == n
-    elif "F" in text: # ja lietotājs ir ievadījis F°
+    elif "F" in text: # ja lietotājs ir ievadījis F
+        print("Input filename please: ")
 
         fileName = input()
         path = "./test/"
