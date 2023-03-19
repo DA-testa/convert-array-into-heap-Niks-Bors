@@ -42,7 +42,7 @@ def main(): # pārbauda vai ir I va F
         fileName = input()
         with open (fileName, 'r') as jaunsf:
             n = int(jaunsf.readline())
-    data = list(map(int, jaunsf.readline()))
+            data = list(map(int, jaunsf.readline()))
     
     # TODO : add input and corresponding checks
     # add another input for I or F 
