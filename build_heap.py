@@ -65,9 +65,10 @@ def main(): # pārbauda vai ir I va F
     # this number should be less than 4n (less than 4*len(data))
 
     # output all swaps
+    
     print(len(swaps))
-    for swap in swaps:
-        print(*swap)
+    for i, j in swaps:
+        print(i, j)
 
 if __name__ == "__main__":
     main()
