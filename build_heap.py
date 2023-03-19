@@ -38,7 +38,7 @@ def main(): # pārbauda vai ir I va F
         
         data= list(map(int,input().split()))
        
-    elif "F" in text: # ja lietotājs ir ievadījis F
+    if "F" in text: # ja lietotājs ir ievadījis F
         fileName = input()
         with open (fileName, 'r') as jaunsf:
             n = int(jaunsf.readline())
