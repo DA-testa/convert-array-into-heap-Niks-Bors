@@ -35,34 +35,29 @@ def main(): # pārbauda vai ir I va F
     text = input("Ievadat: ")
     if "I" in text:
         n = int(input())
-        data = input()
         
-        
+        data= list(map(int,input().split()))
        
-    elif "F" in text: # ja lietotājs ir ievadījis F
+    elif "F" in text: # ja lietotājs ir ievadījis F°
+
         fileName = input()
-        if "a" in fileName:
-            print("a ir failā")
-            return
-        filePath = "./tests/"+fileName
-        with open (filePath, mode="r") as jaunsf:
+        path = "./test/"
+        with open (path + fileName, 'r') as jaunsf:
             n = int(jaunsf.readline())
-            data = jaunsf.readline()
-    else:
-        print("kluda")
-    return
+            data = list(map(int, jaunsf.readline()))
+    
     # TODO : add input and corresponding checks
     # add another input for I or F 
     # first two tests are from keyboard, third test is from a file
-        
+        assert len(data) == n
 
     # input from keyboard
     
     
-    data= list(map(int,input().split()))
+    
 
     # checks if lenght of data is the same as the said lenght
-    assert len(data) == n
+    
 
     # calls function to assess the data 
     # and give back all swaps
