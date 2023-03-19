@@ -42,10 +42,10 @@ def main(): # pārbauda vai ir I va F
         print("Input filename please: ")
 
         fileName = input()
-        path = "./test/"
-        with open (path + fileName, 'r') as jaunsf:
+        path = "./tests/"
+        with open(path + fileName, 'r') as jaunsf:
             n = int(jaunsf.readline())
-            data = list(map(int, jaunsf.readline()))
+            data = list(map(int, jaunsf.readline().split()))
     
     # TODO : add input and corresponding checks
     # add another input for I or F 
