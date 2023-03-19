@@ -18,7 +18,8 @@ def build_heap(data): # šī funkcija ņem un izveidoto koku izmantojot sift_ do
     swaps = []
     n = len(data) 
     for i in range(n//2-1,-1,-1):
-        sift_down(data, swaps, i)
+        sift_down(data, swaps, i) 
+    assert len(data) == n
     return swaps
 
     
@@ -38,7 +39,7 @@ def main(): # pārbauda vai ir I va F
         
         data= list(map(int,input().split()))
        
-    if "F" in text: # ja lietotājs ir ievadījis F
+    elif "F" in text: # ja lietotājs ir ievadījis F
         fileName = input()
         with open (fileName, 'r') as jaunsf:
             n = int(jaunsf.readline())
@@ -47,7 +48,7 @@ def main(): # pārbauda vai ir I va F
     # TODO : add input and corresponding checks
     # add another input for I or F 
     # first two tests are from keyboard, third test is from a file
-        assert len(data) == n
+       
 
     # input from keyboard
     
