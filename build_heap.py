@@ -40,9 +40,9 @@ def main(): # pārbauda vai ir I va F
        
     elif "F" in text: # ja lietotājs ir ievadījis F
         fileName = input()
-            with open(fileName,'r',encoding = "utf8") as jaunsf:
-                 n = int(jaunsf.readline())
-                 data = list(map(int, jaunsf.readline()))
+        with open (fileName, 'r', encoding = "utf8") as jaunsf:
+            n = int(jaunsf.readline())
+            data = list(map(int, jaunsf.readline()))
     
     # TODO : add input and corresponding checks
     # add another input for I or F 
