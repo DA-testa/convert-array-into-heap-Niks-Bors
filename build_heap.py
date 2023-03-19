@@ -37,7 +37,7 @@ def main(): # pārbauda vai ir I va F
         n = int(input())
         
         data= list(map(int,input().split()))
-       
+        assert len(data) == n
     elif "F" in text: # ja lietotājs ir ievadījis F°
 
         fileName = input()
@@ -49,7 +49,7 @@ def main(): # pārbauda vai ir I va F
     # TODO : add input and corresponding checks
     # add another input for I or F 
     # first two tests are from keyboard, third test is from a file
-        assert len(data) == n
+        
 
     # input from keyboard
     
