@@ -1,5 +1,5 @@
 # python3
-def sift_down(data, swaps, i):
+def sift_down(data, swaps, i):# šī funkcija izmantojot rekursiju maina vietās elementus ar indeksu i, liidz tas sasniedz apakšu
     n= len(data)
     maz=i
     labais=(2*i)+2
@@ -14,7 +14,7 @@ def sift_down(data, swaps, i):
         sift_down(data, swaps, maz)
     return swaps
 
-def build_heap(data):
+def build_heap(data): # šī funkcija ņem un izveidoto koku izmantojot sift_ down pārliek elementus tā, lai visi bērni būtu lielāki par vecākiem
     swaps = []
     n = len(data) 
     for i in range(n//2-1,-1,-1):
@@ -31,20 +31,18 @@ def build_heap(data):
     
 
 
-def main():
+def main(): # pārbauda vai ir I va F
     text = input("Ievadat: ")
     if "I" in text:
         n = int(input())
         
         data= list(map(int,input().split()))
        
-    elif "F" in text: # ja lietotājs ir ievadījis F, tad nolasa mezglu daudzumu un vecāku masīvu no faila, pēcāk pāŗbauda vai faila nosaukumā nav a burts
-        fileName = str(input())
-        try:
-            fileName="test/" + str(fileName)
+    elif "F" in text: # ja lietotājs ir ievadījis F
+        fileName = input()
             with open(fileName,'r') as jaunsf:
                  n = int(jaunsf.readline())
-            return
+                 data = list(map(int, jaunsf.readline()))
     
     # TODO : add input and corresponding checks
     # add another input for I or F 
@@ -52,8 +50,8 @@ def main():
         assert len(data) == n
 
     # input from keyboard
-    n = int(input())
-    data = list(map(int, input().split()))
+    
+    
     
 
     # checks if lenght of data is the same as the said lenght
