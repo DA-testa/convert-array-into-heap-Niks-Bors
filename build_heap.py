@@ -12,13 +12,13 @@ def sift_down(data, swaps, i):# šī funkcija izmantojot rekursiju maina vietās
         swaps.append((i, maz))
         data[i], data[maz] = data[maz],data[i]
         sift_down(data, swaps, maz)
-    return swaps
+    
 
 def build_heap(data): # šī funkcija ņem un izveidoto koku izmantojot sift_ down pārliek elementus tā, lai visi bērni būtu lielāki par vecākiem
     swaps = []
     n = len(data) 
     for i in range(n//2-1,-1,-1):
-        sift_down(data, swaps, maz)
+        sift_down(data, swaps, i)
     return swaps
 
     
