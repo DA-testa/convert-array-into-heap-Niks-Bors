@@ -18,8 +18,7 @@ def build_heap(data): # šī funkcija ņem un izveidoto koku izmantojot sift_ do
     swaps = []
     n = len(data) 
     for i in range(n//2-1,-1,-1):
-        sift_down(data, swaps, i) 
-    assert len(data) == n
+        sift_down(data, swaps, i)
     return swaps
 
     
@@ -48,7 +47,7 @@ def main(): # pārbauda vai ir I va F
     # TODO : add input and corresponding checks
     # add another input for I or F 
     # first two tests are from keyboard, third test is from a file
-       
+        assert len(data) == n
 
     # input from keyboard
     
@@ -66,10 +65,10 @@ def main(): # pārbauda vai ir I va F
     # this number should be less than 4n (less than 4*len(data))
 
     # output all swaps
-    
+    swaps = build_heap(data)
     print(len(swaps))
-    for i, j in swaps:
-        print(i, j)
+    for swap in swaps:
+        print(swap[0],swap[1])
 
 if __name__ == "__main__":
     main()
